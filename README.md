@@ -43,33 +43,28 @@ This mod that adds an extra NPC (Sandra) in a very interesting way.  It also act
 - Moved *sbs.tp2* to mod top folder to support AL|EN's "Project Infinity".
 - Externalized tp2 code into *main_component.tpa* library for more comfortable readability and maintenance.
 - Commented code as much as possible.
+- Grouped portraits installations into four main `SUBCOMPONENTS`.
 - Lower cased files.
 - Added archive libiconv-1.9.2-1-src.7z with iconv license info.
 - Updated WeiDU installer to v249.
 
 ## 
 
-##### Version 3
+##### Version 3 &nbsp;(March 21, 2010)
 
 - Readme overhauled.
-- Added the Sophitia soundset from the Soul Calibur games. - I *hate* silent NPCs.
+- Added the Sophitia sound set from the Soul Calibur games. - I *hate* silent NPCs.
 - Added additional portrait choices.
 - Added portraits for the two non-joinable NPCs.
 - Removed unneeded files and removed file extensions that were causing the mod not to install properly.
-- All files were organised into folders.
-- The .tp2 was overhauled to make it more readable.
-
-## 
-
-##### Version 3
-
-- Mod traified and Spanish translation added by Lisandro of Clandlan!
+- Organised all files into folders.
+- Overhauled .tp2 to make it more readable.
 
 ## 
 
 ##### Version 2
 
-- Changed readme path to the up to date one.
+- Mod TRAified and Spanish translation added by Lisandro of Clandlan!
 
 ## 
 

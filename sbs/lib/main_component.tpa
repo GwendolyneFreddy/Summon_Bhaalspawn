@@ -9,8 +9,8 @@ SILENT
 
 COPY ~sbs/npcs~ ~override~
 
-COPY ~sbs/audio~ ~override~
 
+COPY ~sbs/audio~ ~override~
 
 /* ------------------ *
  *  Installing items  *
@@ -109,6 +109,13 @@ COPY ~sbs/cre/sellthf.cre~ ~override~
 COPY ~sbs/cre/sbsmess.cre~ ~override~
 	SAY NAME1 @51
 	SAY NAME2 @51
+
+
+/* ---------------------- *
+ *  Installing portraits  *
+ * ---------------------- */
+
+COPY ~sbs/%portrait%~ ~override~
 
 
 /* --------------------------------- *

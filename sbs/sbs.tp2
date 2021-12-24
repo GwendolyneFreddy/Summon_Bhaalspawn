@@ -19,27 +19,38 @@ LANGUAGE ~Castellano (Traduccion por Lisandro para Clandlan - www.clandlan.net)~
          ~sbs\language\spanish\setup.tra~ 
 
 
-BEGIN @0
+/* ================================================= *
+ *  Summon Bhaalspawn - Sandra NPC (main component)  *
+ * ================================================= */
+BEGIN @0                                           // ~Install Skie Portrait (original mod portrait)~
+SUBCOMPONENT @5                                    // ~Summon Bhaalspawn (Sandra NPC)~
 
-PRINT @1
-
+OUTER_SET portrait = 0
 INCLUDE ~sbs\lib\main_component.tpa~ 
 
-PRINT @1
 
-// The End
+BEGIN @1                                           // ~Install edited Skie portrait by Plasmocat~
+SUBCOMPONENT @5
 
-BEGIN @52
-COPY ~SBS/0~ ~override~
+OUTER_SET portrait = 1
+INCLUDE ~sbs\lib\main_component.tpa~ 
 
-BEGIN @53
-COPY ~SBS/1~ ~override~
 
-BEGIN @54
-COPY ~SBS/2~ ~override~
+BEGIN @2                                           // ~Install Redheaded Paladin portrait (unknown author)~
+SUBCOMPONENT @5
 
-BEGIN @55
-COPY ~SBS/3~ ~override~
+OUTER_SET portrait = 2
+INCLUDE ~sbs\lib\main_component.tpa~ 
 
-BEGIN @56
-COPY ~SBS/4~ ~override~
+BEGIN @3                                           // ~Install Salma Hayek portrait (from The Portrait Portal)~
+SUBCOMPONENT @5
+
+OUTER_SET portrait = 3
+INCLUDE ~sbs\lib\main_component.tpa~ 
+
+
+BEGIN @4                                           // ~Install edited Skie portrait by Xenobia (from the Baldur's Goth Expansion Pack)~
+SUBCOMPONENT @5
+
+OUTER_SET portrait = 4
+INCLUDE ~sbs\lib\main_component.tpa~ 

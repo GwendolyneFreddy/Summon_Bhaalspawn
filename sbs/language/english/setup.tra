@@ -1,10 +1,11 @@
-@0   = ~Summon Bhaalspawn (Sandra NPC)~
-@1   = ~Remember to install at least one of the portraits, or Sandra will not have one!~
+@0   = ~Install Skie Portrait (original mod portrait)~
+@1   = ~Install edited Skie portrait by Plasmocat~
+@2   = ~Install Redheaded Paladin portrait (unknown author)~
+@3   = ~Install Salma Hayek portrait (from The Portrait Portal)~
+@4   = ~Install edited Skie portrait by Xenobia (from the Baldur's Goth Expansion Pack)~
+@5   = ~Summon Bhaalspawn (Sandra NPC)~
 
-@52 = ~Install Skie Portrait (Original Mod Portrait)~
-@53 = ~Install Edited Skie Portrait by Plasmocat~
-@54 = ~Install Redheaded Paladin Portrait (Author Unknown)~
-@55 = ~Install Salma Hayek Portrait from The Portrait Portal ~
+//@1   = ~Remember to install at least one of the portraits, or Sandra will not have one!~
 
 
 /* ================== *
