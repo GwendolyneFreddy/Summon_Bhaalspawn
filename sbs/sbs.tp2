@@ -1,0 +1,201 @@
+BACKUP ~SBS/Backup~// where should we put backup files?
+// where should tell the user to send email if something goes wrong?
+AUTHOR ~majortomsawyer@hotmail.com~
+
+// ALWAYS
+//  AT_INTERACTIVE_EXIT ~VIEW SBS/SBS.txt~
+// END
+
+AUTO_TRA ~SBS\Language\%s~ // This will tell WeiDU the folder where the D's are stored.
+
+LANGUAGE ~English~
+	      ~English~
+         ~SBS\Language\English\setup.tra~
+
+// This would be the new stuff. As you can see it's only adding a few new lines to tell WeiDU where it can find the .tra files.
+
+LANGUAGE ~Castellano (Traduccion por Lisandro para Clandlan - www.clandlan.net)~ 
+         ~Spanish~ 
+         ~SBS\Language\Spanish\setup.tra~ 
+
+
+BEGIN @0
+
+PRINT @1
+
+COPY ~SBS/store/.DS_Store~ ~override~
+
+COPY ~SBS/npcs~ ~override~
+
+COPY ~SBS/audio~ ~override~
+
+// ----------------------------------------------------------------------
+// First copy the item file
+
+COPY ~SBS/itm/SCRLBS.itm~ ~override~
+  SAY NAME2 @0
+  SAY DESC @2
+
+// ----------------------------------------------------------------------
+// Copy the Divine Soul item
+
+COPY ~SBS/itm/SW2HDS.itm~ ~override/SW2HDS.itm~
+	SAY NAME1 @3
+	SAY NAME2 @3
+	SAY DESC @4
+ 
+// ----------------------------------------------------------------------
+// Copy the spells for Divine Soul
+
+COPY ~SBS/spin/SPIN135.spl~ ~override/SPIN135.spl~
+	SAY NAME1 @3
+	SAY NAME2 @3
+	SAY 0xFE @5
+	
+COPY ~SBS/spin/SPINDS.spl~ ~override/SPINDS.spl~
+	SAY NAME1 @3
+	SAY NAME2 @3
+	
+// ----------------------------------------------------------------------
+// Copy spells for Cure Light Wounds Innate Ability
+
+COPY ~SBS/spin/SPIN130.spl~ ~override/SPIN130.spl~
+	SAY 0xFE @6
+
+// ----------------------------------------------------------------------
+// Copy the creature file for the NPC, the NAME1 and NAME2 is self-explanatory
+// but 0x1cc is the biography.
+
+COPY ~SBS/cre/bhaalspw.cre~ ~override/bhaalspw.cre~
+  SAY NAME1 @7
+  SAY NAME2 @7
+  SAY MORALE @8 
+  SAY HAPPY @9 
+  SAY UNHAPPY_ANNOYED @10 
+  SAY UNHAPPY_SERIOUS @11 
+  SAY UNHAPPY_BREAKING @12 
+  SAY LEADER @13 
+  SAY TIRED @14 
+  SAY BORED @15 
+  SAY BATTLE_CRY1 @16 
+  SAY BATTLE_CRY2 @17 
+  SAY BATTLE_CRY3 @18 
+  SAY BATTLE_CRY4 @19 
+  SAY BATTLE_CRY5 @20 
+  SAY DAMAGE ~~ [MTS#s14]
+  SAY DYING ~~ [MTS#s15]
+  SAY HURT @12 
+  SAY AREA_FOREST @24 
+  SAY AREA_CITY @25 
+  SAY AREA_DUNGEON @24 
+  SAY AREA_DAY @25 
+  SAY AREA_NIGHT @24 
+  SAY SELECT_COMMON1 @18 
+  SAY SELECT_COMMON2 @17 
+  SAY SELECT_COMMON3 @18 
+  SAY SELECT_COMMON4 @17 
+  SAY SELECT_COMMON5 @18 
+  SAY SELECT_COMMON6 @17 
+  SAY SELECT_ACTION1 @35 
+  SAY SELECT_ACTION2 @36 
+  SAY SELECT_ACTION3 @37 
+  SAY SELECT_ACTION4 @38 
+  SAY SELECT_ACTION5 @9 
+  SAY SELECT_ACTION6 @10 
+  SAY SELECT_ACTION7 @24 
+  SAY SELECT_RARE1 @13 
+  SAY SELECT_RARE2 @43 
+  SAY CRITICAL_HIT @20 
+  SAY CRITICAL_MISS @12 
+  SAY TARGET_IMMUNE @12 
+  SAY INVENTORY_FULL @43 
+  SAY PICKED_POCKET ~~
+  SAY HIDDEN_IN_SHADOWS ~~
+  SAY SPELL_DISRUPTED @43 
+  SAY SET_A_TRAP ~~
+
+  SAY 0x01cc @50
+
+// ----------------------------------------------------------------------
+// Copy the BCS Script
+
+COPY ~SBS/bcs/BHAALSPW.bcs~ ~override/BHAALSPW.bcs~
+
+// ----------------------------------------------------------------------
+// Copy the Seller Thief creature file
+
+COPY ~SBS/cre/SELLTHF.cre~ ~override/SELLTHF.cre~
+
+// ----------------------------------------------------------------------
+// Copy the Messenger Creature file
+
+COPY ~SBS/cre/SBSMESS.cre~ ~override/SBSMESS.cre~
+	SAY NAME1 @51
+	SAY NAME2 @51
+
+// ----------------------------------------------------------------------
+// Compile the D files
+
+COMPILE ~SBS/d/bhaalspw.d~ USING ~SBS/%s/bhaalspw.tra~
+COMPILE ~SBS/d/SELLTHF.d~ USING ~SBS/%s/sellthf.tra~
+COMPILE ~SBS/d/BBHALSPW.d~ USING ~SBS/%s/bbhalspw.tra~
+
+// ----------------------------------------------------------------------
+// Extend the bottom of ar0300 so the thief appears in the docks district
+
+EXTEND_BOTTOM ~ar0300.bcs~ ~SBS/bcs/app0300.bcs~
+
+// ----------------------------------------------------------------------
+// Extend the bottom of ar0903 so the messenger appears in the Radiant Heart
+
+EXTEND_BOTTOM ~ar0903.bcs~ ~SBS/bcs/app0903.bcs~
+
+// ----------------------------------------------------------------------
+// Extend the bottom of Imoen2.bcs so she acquires the Bhaalspawn abilities
+
+EXTEND_BOTTOM ~Imoen2.bcs~ ~SBS/bcs/appI.bcs~
+
+// ----------------------------------------------------------------------
+// Append a row to pdialog.2da so the new NPC dialogs change correctly
+
+APPEND ~pdialog.2da~
+~bhaalspw	bhalspwP	bhalspwJ	bhalspwD~
+UNLESS ~bhaalspw~
+UNLESS ~25POST~
+
+APPEND ~pdialog.2da~
+~bhaalspw	bhalspwP	bhalspwJ	bhalspwD	bhal25P	bhal25J	bhal25D	bhal25~
+UNLESS ~bhaalspw~
+IF ~25POST~
+
+// ----------------------------------------------------------------------
+// Append rows to Interdia.2da so Interact Dialogs work
+
+APPEND ~interdia.2da~
+~Imoen2	BImoen2~
+UNLESS ~Imoen2~
+
+APPEND ~interdia.2da~
+~BHAALSPW BBHALSPW~
+UNLESS ~BHAALSPW~
+
+// ----------------------------------------------------------------------
+
+PRINT @1
+
+// The End
+
+BEGIN @52
+COPY ~SBS/0~ ~override~
+
+BEGIN @53
+COPY ~SBS/1~ ~override~
+
+BEGIN @54
+COPY ~SBS/2~ ~override~
+
+BEGIN @55
+COPY ~SBS/3~ ~override~
+
+BEGIN @56
+COPY ~SBS/4~ ~override~

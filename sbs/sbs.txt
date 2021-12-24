@@ -1,0 +1,86 @@
+                                                          Baldur's Gate II
+                          Summon Bhaalspawn (Sandra NPC) PC Conversion v3
+                           by MajorTomSawyer - majortomsawyer@hotmail.com
+
+
+Table of Contents
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~
+I.    About
+II.   Installation
+III.  Components
+IV.  Tools
+V. Version History
+VI.  Special Thanks
+
+     SBS is a weidu mod that adds an extra NPC in a very interesting way.  It also acts as a template for those who wish to install a NPC in a new and interesting way.  Currently, Sandra has dialogue for joining and leaving, some very interesting banter dialog that might result in some special circumstances, a special surprise for Imoen, and a few Interjections done.
+
+     Sandra has no specific location in the game where she can be found... all I can say is scour the docks.
+
+II.     Installation:
+
+BGII is required. ToB might be required (I am unsure). Summon Bhaalspawn should work fine with any WeiDU mod.  
+
+Unzip the main ZIP file into your BGII main directory. This is normally:
+        C:\Program Files\Black Isle\BGII - SoA\
+
+Run (click on) "Setup-SBS.exe". 
+
+Then choose which components you would like to install. You may always uninstall them later by re-running "Setup-SBS.exe". 
+
+As far as I know, you do *not* need to start a new game to take advantage of anything you installed. But some of them only help at the beginning.  
+
+III.     Components:     
+
+1. Install Summon Bhaal Spawn. 
+
+     This is the core component of the mod. The latter ones will be rather useless without it. Besides, what is the point of downloading this and then unzipping it to your BGII folder if you don't want to use it?
+
+2. Install Skie Portrait
+
+     The original version of this mod used Skie's portrait for Sandra. A few people suggested that she should have the option of using diffrent portraits. I included this one for those who want to play the original.
+
+3. Install Edited Skie Portrait by Plasmocat
+
+     I love Plasmocat's work. Always have. She started a thread at Spellhold Studios to showcase her conversions of the Baldur's Gate I portraits to Baldur's Gate II style. I added this component with her permission partially because of what I mentioned in component 2. I think her version looks MUCH better then the original.
+
+4. Install Redheaded Paladin Portrait
+
+     I wish I knew who did this portrait, I love it. Since Sandra wears armor and uses a two handed sword this seemed perfect. Her hair color is listed as red-black, so I thought... why not?
+
+5. Install Salma Hayek Portrait.
+
+     This one was taken from The Portrait Portal. I have always loved the work there. I thought this might work because it makes Salma look like someone who has seen many battles.
+
+IV. Tools:
+
+DTLCEP
+Near Infinity
+Notepad
+Weidu
+
+V. Version History
+3
+ - Mod traified and Spanish translation added by Lisandro of Clandlan!
+2
+ - Readme overhauled.
+ - Added the Sophitia soundset from the Soul Calibur games. - I *hate* silent NPCs.
+ - Added additional portrait choices.
+ - Added portraits for the two non-joinable NPCs.
+ - Removed unneeded files and removed file extensions that were causing the mod not to install properly.
+ - All files were organised into folders.
+ - The .tp2 was overhauled to make it more readable.
+
+1.1
+ - Windows version packaged by MTS. (Thanks CamDawg for the how-to!)
+
+VI. Special Thanks:
+
+(in alphabetical order)
+
+*CamDawg - For explaining how to convert mac mods to PC.
+*Hlidskiaff - For telling me that I could create my own mod, and answering an assload of questions.
+*SConrad - For helping me with many questions and the .tp2
+*Sister Sinister - For putting up with my BG2 obession.
+*TeamBG - For providing hosting for this mod.
+*Ted's Pipe Shoppe - For supplying the best tobacco anywhere, which keeps me sane.
+*Wes Weimer - For creating WEIDU. That tool kicks ass.

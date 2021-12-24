@@ -1,0 +1,88 @@
+@0  = ~Convocar Engendro de Bhaal~ 
+@1  = ~Recuerda instalar al menos uno de los retratos, o Sandra no tendrá ninguno.~
+@2  = ~La magia que sólo puede ser asociada con Bhaal fluye a través de este pergamino. <CHARNAME> se siente de algún modo conectado con el pergamino. Creado por un engendro de Bhaal desconocido, puede ser usado solamente en presencia de un engendro de Bhaal. La pregunta es: ¿Qué ocurrirá cuando sea usado? Cada vez más la presión a la pregunta: ¿Debería de usarlo?.~ ~La magia que sólo puede ser asociada con Bhaal fluye a través de este pergamino. <CHARNAME> se siente de algún modo conectada con el pergamino. Creado por un engendro de Bhaal desconocido, puede ser usado solamente en presencia de un engendro de Bhaal. La pregunta es: ¿Qué ocurrirá cuando sea usado? Cada vez más la presión a la pregunta: ¿Debería de usarlo?.~ 
+@3  = ~Alma Divina~
+@4  = ~El poder del alma divina de Sandra se ha llenado con la voluntad de Tyr para crear esta poderosa arma. La única advertencia es que la espada es una extensión de la propia alma de Sandra, así que sólo puede existir para ella sin ningún efecto de locura. De manera que, la espada actúa como un Santo Vengador, disipando magia al contacto. También confiere 100% de Resistencia Mágica y protección contra todo tipo de hechizos. Actúa como una espada + 10, incrementando la oportunidad de golpear por 10 y el daño por 10 igualmente.
+
+CARACTERÍSTICAS:
+
+Habilidades:
+  100% Resistencia Mágica
+  Resistencia completa a cualquier hechizo
+  +5 de daño a oponentes caóticos malignos en adición a otros bonificadores
+  Disipa magia al golpear
+  Suma 1 al ataque por asalto
+  Bonificador a Clase de Armadura: +2
+
+GAC0: +10
+Daño: 1D12+10
+Tipo de Daño: cortante
+Peso: 0
+Factor de Velocidad: 1
+Talento Marcial: Mandoble
+Tipo: a dos manos
+Requiere: 14 de Fuerza
+
+Sólo lo puede usar:
+  Sandra~ 
+@5  = ~Sandra ha ganado la habilidad: Alma Divina~
+@6  = ~Habilidad Especial Ganada: Curar Heridas Leves~
+@7  = ~Sandra~ 
+@8  = ~¡Dioses, protegedme!.~ [MTS#s01]
+@9  = ~Me estoy acercando, cada cosa en su momento ~ [MTS#s02] 
+@10 = ~No perderé la esperanza.~ [MTS#s01]
+@11 = ~No digáis nada.~ [MTS#s04]
+@12 = ~Esto no puede ser.~ [MTS#s05] 
+@13 = ~Realizo eso, tengo un trato con esto.~ [MTS#s06]
+@14 = ~¿No tenéis un lugar para iros a casa?.~ [MTS#s07] 
+@15 = ~Tengamos algún descanso.~ [MTS#s08]
+@16 = ~No quiero pelear.~ [MTS#s09]
+@17 = ~¡Dioses, protegedme!.~ [MTS#s11]
+@18 = ~Dioses, guiadme.~ [MTS#s10] 
+@19 = ~Os daré todo lo que tengo.~ [MTS#s12]
+@20 = ~Perdonadme.~ [MTS#s13] 
+@21 = ~~ [MTS#s14]
+@22 = ~~ [MTS#s15]
+@23 = ~Esto no puede ser.~ [MTS#s16] 
+@24 = ~Nuestras plegarias serán respondidas.~ [MTS#s17]
+@25 = ~Nuestras plegarias serán respondidas.~ [MTS#sbs18] 
+@26 = ~Nuestras plegarias serán respondidas.~ [MTS#s19]
+@27 = ~Nuestras plegarias serán respondidas.
+~ [MTS#s20]
+@28 = ~Nuestras plegarias serán respondidas.
+~ [MTS#s21]
+@29 = ~Dioses, guiadme.~ [MTS#s22]
+@30 = ~Dioses, protegedme.~ [MTS#s23]
+@31 = ~Dioses, guiadme.~ [MTS#s24]
+@32 = ~Dioses, protegedme.~ [MTS#s25]
+@33 = ~Dioses, guiadme.~ [MTS#s26]
+@34 = ~Dioses, protegedme.~ [MTS#s27]
+@35 = ~¿Estáis seguro que esto es lo que queréis?.~ [MTS#s28]
+@36 = ~Ok, estoy lista.~ [MTS#s29]
+@37 = ~Os daré todo lo que tengo.~ [MTS#s30]
+@38 = ~Quiero salvaros.~ [MTS#s31]
+@39 = ~Me estoy acercando, cada cosa en su momento.~ [MTS#s32]
+@40 = ~No perderé la esperanza.~ [MTS#s33]
+@41 = ~Nuestras plegarias serán respondidas.~ [MTS#s34]
+@42 = ~Realizo eso, tengo un trato con esto.~ [MTS#s35]
+@43 = ~¡Detenedlo!.~ [MTS#s36]
+@44 = ~Perdonadme.~ [MTS#s37]
+@45 = ~Esto no puede ser.~ [MTS#s38]
+@46 = ~Esto no puede ser.~ [MTS#s39]
+@47 = ~¡Detenedlo!.~ [MTS#s40]
+@49 = ~¡Detenedlo!.~ [MTS#s41]
+@50 = ~Cuando preguntáis a Sandra por sus orígenes, ella tiene reminiscencia por su hogar la ciudad de Aguas Profundas. Nació en medio de dos atalayas, las que le dieron su aguda fascinación por la justicia. Sus padres rezan diariamente a Helm para que la protección del Vigilante les sonría. No obstante, Sandra gustaba de visitar el templo cercano de Tyr.
+
+Eventualmente, ella se puso bajo la guía de un joven acólito quién la tomó como sacerdotisa, ella decidió unirse, a semejanza de sus padres. Ella hubiera sido una sacerdotisa a no ser por los eventos ocurridos sobre sí a la edad de 14 años.
+
+Su padre murió y su madre finalmente le reveló el secreto que había llevado por 14 años. El padre que sepultaron no era el verdadero padre de Sandra. El verdadero padre de Sandra era Bhaal, el Señor del Asesinato.
+
+La vida de Sandra se tornó una confusión. Ella pensó que ya no podría unirse a los sacerdotes, pero los clérigos del templo la convencieron de otro camino. Ellos vieron que ser un engendro de Bhaal era una terrible injusticia y convencieron a Sandra que sus malignos hermanos necesitaban ser limpiados de este mundo. Ella sería entrenada como un paladín, y tomó su poder de engendro de Bhaal para erradicar del mundo a los engendros de Bhaal y así restaurar la justicia. Así podría expiar su pecado de ser una hija de Bhaal.
+
+Ella os asegura que sólo ataca a engendros de Bhaal cuando usan sus poderes para la injusticia, pero os advierte que si os desviáis de la justicia...~
+@51 = ~Mensajero~
+@52 = ~Instalar el retrato de Skie (Retrato Original del Mod)~
+@53 = ~Instalar el Retrato Edita de Skie por Plasmocat~
+@54 = ~Instalar el Retrato de Paladin Pelirrojo (De Autor Desconocido)~
+@55 = ~Instalar el Retrato de Salma Hayek de El Portal del Retrato~
+@56 = ~Instalar el Retrato de BGEP Sandra by Xenobia ~

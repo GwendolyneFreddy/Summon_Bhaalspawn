@@ -1,0 +1,84 @@
+@0  = ~Summon Bhaalspawn~ 
+@1  = ~Remember to install at least one of the portraits, or Sandra will not have one!~
+@2  = ~Magic that can only be associated with Bhaal flow through this scroll.  <CHARNAME> feels somehow connected to this scroll.  Created by a unknown Bhaalspawn, it can only be used in the presence of Bhaalspawn.  The question is: what will happen when it is used?  Ever more pressing is the answer to: who will dare use it?~ 
+@3  = ~Divine Soul~
+@4  = ~The power of Sandra's divine soul was filled with the will of Tyr to create this powerful weapon.  The only caveat is that the sword is an extention of Sandra's own soul, so it can only exist for a turn without Sandra feeling any ill effects.  Otherwise the sword acts like a Holy Avenger dispelling magic on contact.  It also confers 100% Magic Resistence and protections from all spells.  Also, it acts as a +10 sword, increasing the chance to hit by 10 and the damage by 10 as well.
+
+STATISTICS:
+
+Abilities:
+  100% Magic Resistence
+  Complete resistence to any spells
+  +5 damage to chaotic evil opponents in addition to other bonuses
+  Dispels magic on strike
+  Adds 1 attack per round
+  Bonus AC: +2
+  
+THACO: +10
+Damage:  1D12+10
+Damage type:  slashing
+Weight:  0
+Speed Factor: 1
+Proficiency Type: Two handed sword 
+Type:  2-handed
+Requires: 14 Strength
+Usable By:
+ Sandra~ 
+@5  = ~Sandra has gained the ability: Divine Soul~
+@6  = ~Gained Special Ability: Cure Light Wounds~
+@7  = ~Sandra~ 
+@8  = ~Gods, protect me!~ [MTS#s01]
+@9  = ~I'm getting closer, one step at a time.~ [MTS#s02] 
+@10 = ~I won't give up hope.~ [MTS#s01]
+@11 = ~Don't say anything.~ [MTS#s04]
+@12 = ~This can't be.~ [MTS#s05] 
+@13 = ~I realise that I have to deal with this.~ [MTS#s06]
+@14 = ~Don't you have a place to go home to?.~ [MTS#s07] 
+@15 = ~Get some rest.~ [MTS#s08]
+@16 = ~I didn't want to fight.~ [MTS#s09]
+@17 = ~Gods, protect me.~ [MTS#s11]
+@18 = ~Gods, guide me.~ [MTS#s10] 
+@19 = ~I'll give it all I've got.~ [MTS#s12]
+@20 = ~Forgive me.~ [MTS#s13] 
+@23 = ~This can't be.~ [MTS#s16] 
+@24 = ~Our prayers will be answered.~ [MTS#s17]
+@25 = ~Our prayers will be answerd.~ [MTS#sbs18] 
+@26 = ~Our prayers will be answered.~ [MTS#s19]
+@27 = ~Our prayers will be answerd.~ [MTS#s20]
+@28 = ~Our prayers will be answered.~ [MTS#s21]
+@29 = ~Gods, guide me.~ [MTS#s22]
+@30 = ~Gods, protect me.~ [MTS#s23]
+@31 = ~Gods, guide me.~ [MTS#s24]
+@32 = ~Gods, protect me.~ [MTS#s25]
+@33 = ~Gods, guide me.~ [MTS#s26]
+@34 = ~Gods, protect me.~ [MTS#s27]
+@35 = ~Are you sure this is what you want?~ [MTS#s28]
+@36 = ~Ok, I'm ready.~ [MTS#s29]
+@37 = ~I'll give it all I've got..~ [MTS#s30]
+@38 = ~I want to save you.~ [MTS#s31]
+@39 = ~I'm getting closer, one step at a time.~ [MTS#s32]
+@40 = ~I won't give up hope.~ [MTS#s33]
+@41 = ~Our prayers will be answered.~ [MTS#s34]
+@42 = ~I realise that I have to deal with this.~ [MTS#s35]
+@43 = ~Stop it!~ [MTS#s36]
+@44 = ~Forgive me.~ [MTS#s37]
+@45 = ~This can't be.~ [MTS#s38]
+@46 = ~This can't be.~ [MTS#s39]
+@47 = ~Stop it!~ [MTS#s40]
+@49 = ~Stop it!~ [MTS#s41]
+@50 = ~When you ask SANDRA of her origins, she reminicses about her home city of Waterdeep.  She was born a child of two city watchpeople, which always gave her a keen fascination with justice.  Her parents prayed daily to Helm for his protection for the Watch are a profession he smiles upon.  Yet, SANDRA liked to visit the nearby temple of Tyr.
+
+Eventually she fell under the guidance of a young acolyte who taught her much about a priesthood she desired to join, in emulation of her parents.  She would have been a priest except events that happened upon her at the age of fourteen.
+
+Her father passed away and her mother finally revealed a secret they carried for fourteen years.  The father they buried was not SANDRA's real father.  SANDRA's real father was Bhaal, the Lord of Murder.
+
+SANDRA's life was thrown in turmoil.  She believed that she no longer could join the priesthood, but the clergy at the temple convinced her of another path.  They saw the Bhaalspawn as a terrible injustice and convinced SANDRA that her evil brethen needed to be wiped from the world.  She would be trained as a Paladin and taught to wield her Bhaalspawn powers to rid the world of other Bhaalspawn and restore justice.  Then she would atone for the sin of being Bhaal's daughter.
+
+She assures you that she is only after Bhaalspawn that use their power for injustice, but she warns you that if you ever stray from justice...~
+@51 = ~Messenger~
+@52 = ~Install Skie Portrait (Original Mod Portrait)~
+@53 = ~Install Edited Skie Portrait by Plasmocat~
+@54 = ~Install Redheaded Paladin Portrait (Author Unknown)~
+@21 = ~~ [MTS#s14]
+@55 = ~Install Salma Hayek Portrait from The Portrait Portal ~
+@22 = ~~ [MTS#s15]
