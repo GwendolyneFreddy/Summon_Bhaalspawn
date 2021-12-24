@@ -1,13 +1,13 @@
 ![Latest Release](https://img.shields.io/github/v/release/GwendolyneFreddy/Summon_Bhaalspawn?include_prereleases&color=darkred)<a name="top" id="top"> </a>
 ![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/GwendolyneFreddy/Summon_Bhaalspawn?color=gold)
 ![Platform](https://img.shields.io/static/v1?label=platform&message=windows%20%7C%20macOS%20%7C%20linux%20%7C%20Project%20Infinity&color=informational)
-![Language](https://img.shields.io/static/v1?label=language&message=English%20%7C%20French%20%7C%20Polish%20%7C%20Chinese%20%7C%20Russian&color=limegreen)
+![Language](https://img.shields.io/static/v1?label=language&message=English%20%7C%20French%20%7C%20Spanish&color=limegreen)
 
 ![Supported games](https://img.shields.io/static/v1?label=supported%20games&message=BGII:ToB%20%7C%20BGT%20%7C%20BG2%3AEE%20%7C%20EET&color=dodgerblue)
 
 <div align="center"><h1></a>Summon Bhaalspawn (Sandra NPC)</h1>
 
-<h3>A Spellhold Studios mod for Baldur's Gate II: SoA and ToB (original and EE games),<br>
+<h3>A TeamBG mod for Baldur's Gate II: SoA and ToB (original and EE games),<br>
 Baldur's Gate Trilogy and EET<h3>
 
 </div><br>
@@ -41,6 +41,8 @@ This mod that adds an extra NPC (Sandra) in a very interesting way.  It also act
 ##### Version 4 &nbsp;(December 25, 2021)
 
 - Moved *sbs.tp2* to mod top folder to support AL|EN's "Project Infinity".
+- Externalized tp2 code into *main_component.tpa* library for more comfortable readability and maintenance.
+- Commented code as much as possible.
 - Lower cased files.
 - Added archive libiconv-1.9.2-1-src.7z with iconv license info.
 - Updated WeiDU installer to v249.

@@ -1,0 +1,163 @@
+/* ==================================================================================== *
+ *  v4.0.0                                                                              *
+ *                                                                                      *
+ *        S U M M O N    B H A A L S P A W N    ( m a i n    c o m p o n e n t )        *
+ *                                                                                      *
+ * ==================================================================================== */
+
+SILENT
+
+COPY ~sbs/npcs~ ~override~
+
+COPY ~sbs/audio~ ~override~
+
+
+/* ------------------ *
+ *  Installing items  *
+ * ------------------ */
+
+// Summon Bhaalspawn scroll
+// ------------------------
+COPY ~sbs/itm/scrlbs.itm~ ~override~
+	SAY NAME2 @100
+	SAY DESC @101
+
+// Divine Soul sword and spell
+// ---------------------------
+COPY ~sbs/itm/sw2hds.itm~ ~override~
+	SAY NAME1 @103
+	SAY NAME2 @103
+	SAY DESC @104
+
+COPY ~sbs/spin/spin135.spl~ ~override~
+	SAY NAME1 @103
+	SAY NAME2 @103
+	SAY 0xfe @105
+
+COPY ~sbs/spin/spinds.spl~ ~override~
+	SAY NAME1 @103
+	SAY NAME2 @103
+
+// Cure Light Wounds Innate Ability
+// --------------------------------
+COPY ~sbs/spin/spin130.spl~ ~override~
+	SAY 0xfe @6
+
+
+
+/* ---------------------- *
+ *  Installing creatures  *
+ * ---------------------- */
+// but 0x1cc is the biography.
+
+COPY ~sbs/cre/bhaalspw.cre~ ~override~
+	SAY NAME1 @107
+	SAY NAME2 @107
+//	SAY INITIAL_MEETING   ~~
+ 	SAY MORALE            @108
+	SAY HAPPY             @109
+	SAY UNHAPPY_ANNOYED   @110
+	SAY UNHAPPY_SERIOUS   @111
+	SAY UNHAPPY_BREAKING  @112
+	SAY LEADER            @113
+	SAY TIRED             @114
+	SAY BORED             @115
+	SAY BATTLE_CRY1       @116
+	SAY BATTLE_CRY2       @117
+	SAY BATTLE_CRY3       @118
+	SAY BATTLE_CRY4       @119
+	SAY BATTLE_CRY5       @120
+	SAY DAMAGE            @121
+	SAY DYING             @122
+	SAY HURT              @123
+	SAY AREA_FOREST       @124
+	SAY AREA_CITY         @124
+	SAY AREA_DUNGEON      @124
+	SAY AREA_DAY          @124
+	SAY AREA_NIGHT        @124
+	SAY SELECT_COMMON1    @118
+	SAY SELECT_COMMON2    @117
+	SAY SELECT_COMMON3    @118
+	SAY SELECT_COMMON4    @117
+	SAY SELECT_COMMON5    @118
+	SAY SELECT_COMMON6    @117
+	SAY SELECT_ACTION1    @135
+	SAY SELECT_ACTION2    @136
+	SAY SELECT_ACTION3    @137
+	SAY SELECT_ACTION4    @138
+	SAY SELECT_ACTION5    @109
+	SAY SELECT_ACTION6    @110
+	SAY SELECT_ACTION7    @124
+	SAY SELECT_RARE1      @113
+	SAY SELECT_RARE2      @143
+	SAY CRITICAL_HIT      @120
+	SAY CRITICAL_MISS     @145
+	SAY TARGET_IMMUNE     @146
+	SAY INVENTORY_FULL    @147
+	SAY PICKED_POCKET     ~~
+	SAY HIDDEN_IN_SHADOWS ~~
+	SAY SPELL_DISRUPTED   @149
+	SAY SET_A_TRAP        ~~
+	SAY BIO               @150
+
+// Seller Thief
+// ------------
+COPY ~sbs/cre/sellthf.cre~ ~override~
+
+// Messenger
+// ---------
+COPY ~sbs/cre/sbsmess.cre~ ~override~
+	SAY NAME1 @51
+	SAY NAME2 @51
+
+
+/* --------------------------------- *
+ *  Compiling scripts and dialogues  *
+ * --------------------------------- */
+
+COPY ~sbs/bcs/bhaalspw.bcs~ ~override~
+
+COMPILE ~sbs/d/bhaalspw.d~ USING ~sbs/%s/bhaalspw.tra~
+COMPILE ~sbs/d/sellthf.d~ USING ~sbs/%s/sellthf.tra~
+COMPILE ~sbs/d/bbhalspw.d~ USING ~sbs/%s/bbhalspw.tra~
+
+
+/* ------------------- *
+ *  Extending scripts  *
+ * ------------------- */
+
+// Extend the bottom of ar0300 so the thief appears in the docks district
+// ----------------------------------------------------------------------
+EXTEND_BOTTOM ~ar0300.bcs~ ~sbs/bcs/app0300.bcs~
+
+// Extend the bottom of ar0903 so the messenger appears in the Radiant Heart
+// -------------------------------------------------------------------------
+EXTEND_BOTTOM ~ar0903.bcs~ ~sbs/bcs/app0903.bcs~
+
+// Extend the bottom of Imoen2.bcs so she acquires the Bhaalspawn abilities
+// ------------------------------------------------------------------------
+EXTEND_BOTTOM ~imoen2.bcs~ ~sbs/bcs/appi.bcs~
+
+
+/* ----------------------------------------------- *
+ *  Appending Sandra's dialogue files to the game  *
+ * ----------------------------------------------- */
+
+// BG2 game without ToB
+// --------------------
+APPEND ~pdialog.2da~ ~bhaalspw bhalspwp bhalspwj bhalspwd~ UNLESS ~bhaalspw~ UNLESS ~25POST~
+
+APPEND ~interdia.2da~ ~bhaalspw bbhalspw~ UNLESS ~bhaalspw~ UNLESS ~25POST~
+
+// ToB based game
+// --------------
+APPEND ~pdialog.2da~ ~bhaalspw bhalspwp bhalspwj bhalspwd bhal25p bhal25j bhal25d bhal25~ UNLESS ~bhaalspw~ IF ~25POST~
+
+APPEND ~interdia.2da~ ~bhaalspw bbhalspw bbhalspw~ UNLESS ~bhaalspw~ IF ~25POST~
+
+// ----------------------------------------------------------------------
+// Append rows to Interdia.2da so Interact Dialogs work
+
+APPEND ~interdia.2da~
+~Imoen2	BImoen2~
+UNLESS ~Imoen2~
