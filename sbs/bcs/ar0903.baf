@@ -1,0 +1,8 @@
+IF
+	Global("WordSendQuest","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("WordSendQuest","GLOBAL",2)
+		CreateCreature("SBSMESS",[320.853],4)
+END
+

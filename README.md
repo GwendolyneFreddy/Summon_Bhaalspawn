@@ -45,8 +45,10 @@ This mod that adds an extra NPC (Sandra) in a very interesting way.  It also act
 - Commented code as much as possible.
 - Grouped portraits installations into four main `SUBCOMPONENTS`.
 - Modernized dialogues coding.
-- Proofread English and French translations (Gwendolyne).
+- Replaced bcs files with baf files.
+- Spells installation: removed useless `SAY NAME2` patch.
 - Integrated <a href="http://www.shsforums.net/topic/42220-fixes-for-the-big-fixpack/page-12#entry485886">BWP Lollorian's portrait installation fix</a> that restores three missing installation English strref.
+- Proofread English and French translations (Gwendolyne).
 - Moved unused wav files into new :file_folder: "*legacy*" folder.
 - Lower cased files.
 - Added archive libiconv-1.9.2-1-src.7z with iconv license info.

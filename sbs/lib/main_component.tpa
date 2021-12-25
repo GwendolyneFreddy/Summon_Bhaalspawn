@@ -31,12 +31,10 @@ COPY ~sbs/itm/sw2hds.itm~ ~override~
 
 COPY ~sbs/spin/spin135.spl~ ~override~
 	SAY NAME1 @103
-	SAY NAME2 @103
 	SAY 0xfe @105
 
 COPY ~sbs/spin/spinds.spl~ ~override~
 	SAY NAME1 @103
-	SAY NAME2 @103
 
 // Cure Light Wounds Innate Ability
 // --------------------------------
@@ -44,12 +42,12 @@ COPY ~sbs/spin/spin130.spl~ ~override~
 	SAY 0xfe @6
 
 
-
 /* ---------------------- *
  *  Installing creatures  *
  * ---------------------- */
-// but 0x1cc is the biography.
 
+// Sandra
+// ------
 COPY ~sbs/cre/bhaalspw.cre~ ~override~
 	SAY NAME1 @107
 	SAY NAME2 @107
@@ -122,7 +120,7 @@ COPY ~sbs/%portrait%~ ~override~
  *  Compiling scripts and dialogues  *
  * --------------------------------- */
 
-COPY ~sbs/bcs/bhaalspw.bcs~ ~override~
+COMPILE ~sbs/baf/bhaalspw.baf~
 
 COMPILE ~sbs/d/bhaalspw.d~ USING ~sbs/%s/bhaalspw.tra~
 COMPILE ~sbs/d/sellthf.d~ USING ~sbs/%s/sellthf.tra~
@@ -135,15 +133,15 @@ COMPILE ~sbs/d/bbhalspw.d~ USING ~sbs/%s/bbhalspw.tra~
 
 // Extend the bottom of ar0300 so the thief appears in the docks district
 // ----------------------------------------------------------------------
-EXTEND_BOTTOM ~ar0300.bcs~ ~sbs/bcs/app0300.bcs~
+EXTEND_BOTTOM ~ar0300.bcs~ ~sbs/baf/ar300.baf~
 
-// Extend the bottom of ar0903 so the messenger appears in the Radiant Heart
-// -------------------------------------------------------------------------
-EXTEND_BOTTOM ~ar0903.bcs~ ~sbs/bcs/app0903.bcs~
+// Extend the bottom of ar0903 so the messenger appears in the Radiant Heart Headquarters
+// --------------------------------------------------------------------------------------
+EXTEND_BOTTOM ~ar0903.bcs~ ~sbs/baf/ar0903.baf~
 
 // Extend the bottom of Imoen2.bcs so she acquires the Bhaalspawn abilities
 // ------------------------------------------------------------------------
-EXTEND_BOTTOM ~imoen2.bcs~ ~sbs/bcs/appi.bcs~
+EXTEND_BOTTOM ~imoen2.bcs~ ~sbs/baf/appimoen.baf~
 
 
 /* ----------------------------------------------- *
@@ -153,13 +151,11 @@ EXTEND_BOTTOM ~imoen2.bcs~ ~sbs/bcs/appi.bcs~
 // BG2 game without ToB
 // --------------------
 APPEND ~pdialog.2da~ ~bhaalspw bhalspwp bhalspwj bhalspwd~ UNLESS ~bhaalspw~ UNLESS ~25POST~
-
 APPEND ~interdia.2da~ ~bhaalspw bbhalspw~ UNLESS ~bhaalspw~ UNLESS ~25POST~
 
 // ToB based game
 // --------------
 APPEND ~pdialog.2da~ ~bhaalspw bhalspwp bhalspwj bhalspwd bhal25p bhal25j bhal25d bhal25~ UNLESS ~bhaalspw~ IF ~25POST~
-
 APPEND ~interdia.2da~ ~bhaalspw bbhalspw bbhalspw~ UNLESS ~bhaalspw~ IF ~25POST~
 
 // ----------------------------------------------------------------------

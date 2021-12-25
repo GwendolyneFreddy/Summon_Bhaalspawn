@@ -1,0 +1,24 @@
+IF
+	InParty(Myself)
+	Global("BodhiDead","GLOBAL",1)
+	Global("ImoenGainsAbilities","GLOBAL",1)
+	PartyRested()
+THEN
+	RESPONSE #100
+		SetGlobal("ImoenGainsAbilities","GLOBAL",2)
+		SetGlobalTimer("NextAbility","GLOBAL",TWO_DAYS)
+		Interact([PC])
+END
+
+IF
+	InParty(Myself)
+	Global("BodhiDead","GLOBAL",1)
+	Global("ImoenGainsAbilities","GLOBAL",3)
+	GlobalTimerExpired("NextAbility","GLOBAL")
+	PartyRested()
+THEN
+	RESPONSE #100
+		SetGlobal("ImoenGainsAbilities","GLOBAL",4)
+		Interact([PC])
+END
+

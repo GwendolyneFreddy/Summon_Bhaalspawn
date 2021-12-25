@@ -1,0 +1,216 @@
+IF
+	InParty(Myself)
+	Global("BSInterjects","LOCALS",0)
+THEN
+	RESPONSE #100
+		RealSetGlobalTimer("BSInterjectsTimer","GLOBAL",2800)
+		SetGlobal("BSInterjects","LOCALS",1)
+		SetGlobal("BSWhiner","LOCALS",0)
+		SetGlobal("BSBalance","GLOBAL",0)
+END
+
+IF
+	InParty(Myself)
+	GlobalGT("BSBalance","GLOBAL",10)
+	Global("GainDivineSoul","GLOBAL",0)
+	Reputation(Player1,20)
+	PartyRested()
+THEN
+	RESPONSE #100
+		SetGlobal("GainDivineSoul","GLOBAL",1)
+		Interact([PC])
+END
+
+IF
+	InParty(Myself)
+	GlobalLT("BSWhiner","LOCALS",3)
+	RealGlobalTimerExpired("BSInterjectsTimer","GLOBAL")
+	PartyRested()
+	See(Player1)
+	!AreaType(DUNGEON)
+	CombatCounter(0)
+	OR(26)
+		Global("BSInterjects","LOCALS",1)
+		Global("BSInterjects","LOCALS",3)
+		Global("BSInterjects","LOCALS",5)
+		Global("BSInterjects","LOCALS",7)
+		Global("BSInterjects","LOCALS",9)
+		Global("BSInterjects","LOCALS",11)
+		Global("BSInterjects","LOCALS",13)
+		Global("BSInterjects","LOCALS",15)
+		Global("BSInterjects","LOCALS",17)
+		Global("BSInterjects","LOCALS",19)
+		Global("BSInterjects","LOCALS",21)
+		Global("BSInterjects","LOCALS",23)
+		Global("BSInterjects","LOCALS",25)
+		Global("BSInterjects","LOCALS",27)
+		Global("BSInterjects","LOCALS",29)
+		Global("BSInterjects","LOCALS",31)
+		Global("BSInterjects","LOCALS",33)
+		Global("BSInterjects","LOCALS",35)
+		Global("BSInterjects","LOCALS",37)
+		Global("BSInterjects","LOCALS",39)
+		Global("BSInterjects","LOCALS",41)
+		Global("BSInterjects","LOCALS",43)
+		Global("BSInterjects","LOCALS",45)
+		Global("BSInterjects","LOCALS",47)
+		Global("BSInterjects","LOCALS",49)
+		GlobalGT("BSInterjects","LOCALS",50)
+THEN
+	RESPONSE #100
+		RealSetGlobalTimer("BSInterjectsTimer","GLOBAL",10)
+END
+
+IF
+	InParty(Myself)
+	Global("GainDivineSoul","GLOBAL",2)
+	RealGlobalTimerExpired("BSInterjectsTimer","GLOBAL")
+THEN
+	RESPONSE #100
+		RealSetGlobalTimer("BSInterjectsTimer","GLOBAL",2250)
+		Interact([PC])
+END
+
+IF
+	InParty(Myself)
+	InParty("Imoen2")  // Imoen
+	RealGlobalTimerExpired("BSInterjectsTimer","GLOBAL")
+	See("Imoen2")  // Imoen
+	!Dead("Imoen2")  // Imoen
+	!StateCheck("Imoen2",STATE_SLEEPING)  // Imoen
+	Global("ImoenBSInterject","LOCALS",0)
+	CombatCounter(0)
+	!See([ENEMY])
+	!Range([NEUTRAL],10)
+THEN
+	RESPONSE #100
+		RealSetGlobalTimer("BSInterjectsTimer","GLOBAL",1125)
+		SetGlobal("ImoenBSInterject","LOCALS",1)
+		Interact("Imoen2")  // Imoen
+END
+
+IF
+	InParty(Myself)
+	InParty("Imoen2")  // Imoen
+	Global("BodhiDead","GLOBAL",1)
+	GlobalGT("BSInterjects","LOCALS",13)
+	Global("ImoenBSInterject","LOCALS",2)
+	RealGlobalTimerExpired("BSInterjectsTimer","GLOBAL")
+	See("Imoen2")  // Imoen
+	!Dead("Imoen2")  // Imoen
+	!StateCheck("Imoen2",STATE_SLEEPING)  // Imoen
+	CombatCounter(0)
+	!See([ENEMY])
+	!Range([NEUTRAL],10)
+THEN
+	RESPONSE #100
+		RealSetGlobalTimer("BSInterjectsTimer","GLOBAL",1125)
+		SetGlobal("ImoenBSInterject","LOCALS",3)
+		SetGlobal("ImoenGainsAbilities","GLOBAL",1)
+		Interact("Imoen2")  // Imoen
+END
+
+IF
+	InParty(Myself)
+	GlobalLT("BSBalance","GLOBAL",-2)
+THEN
+	RESPONSE #100
+		SetLeavePartyDialogFile()
+		LeaveParty()
+		Wait(1)
+		Dialog(Player1)
+END
+
+IF
+	InParty(Myself)
+	GlobalLT("BSWhiner","LOCALS",3)
+	RealGlobalTimerExpired("BSInterjectsTimer","GLOBAL")
+	!AreaType(DUNGEON)
+	!AreaCheck("AR1300")  // Forteresse de'Arnise
+	See(Player1)
+	!See([ENEMY])
+	!Range([NEUTRAL],10)
+	CombatCounter(0)
+	OR(25)
+		Global("BSInterjects","LOCALS",1)
+		Global("BSInterjects","LOCALS",3)
+		Global("BSInterjects","LOCALS",5)
+		Global("BSInterjects","LOCALS",7)
+		Global("BSInterjects","LOCALS",9)
+		Global("BSInterjects","LOCALS",11)
+		Global("BSInterjects","LOCALS",13)
+		Global("BSInterjects","LOCALS",15)
+		Global("BSInterjects","LOCALS",17)
+		Global("BSInterjects","LOCALS",19)
+		Global("BSInterjects","LOCALS",21)
+		Global("BSInterjects","LOCALS",23)
+		Global("BSInterjects","LOCALS",25)
+		Global("BSInterjects","LOCALS",27)
+		Global("BSInterjects","LOCALS",29)
+		Global("BSInterjects","LOCALS",31)
+		Global("BSInterjects","LOCALS",33)
+		Global("BSInterjects","LOCALS",35)
+		Global("BSInterjects","LOCALS",37)
+		Global("BSInterjects","LOCALS",39)
+		Global("BSInterjects","LOCALS",41)
+		Global("BSInterjects","LOCALS",43)
+		Global("BSInterjects","LOCALS",45)
+		Global("BSInterjects","LOCALS",47)
+		Global("BSInterjects","LOCALS",49)
+THEN
+	RESPONSE #100
+		MoveViewObject("BHAALSPW",INSTANT)
+		IncrementGlobal("BSInterjects","LOCALS",1)
+		Interact(Player1)
+END
+
+IF
+	InParty(Myself)
+	GlobalLT("BSWhiner","LOCALS",3)
+	RealGlobalTimerExpired("BSInterjectsTimer","GLOBAL")
+	OR(25)
+		Global("BSInterjects","LOCALS",2)
+		Global("BSInterjects","LOCALS",4)
+		Global("BSInterjects","LOCALS",6)
+		Global("BSInterjects","LOCALS",8)
+		Global("BSInterjects","LOCALS",10)
+		Global("BSInterjects","LOCALS",12)
+		Global("BSInterjects","LOCALS",14)
+		Global("BSInterjects","LOCALS",16)
+		Global("BSInterjects","LOCALS",18)
+		Global("BSInterjects","LOCALS",20)
+		Global("BSInterjects","LOCALS",22)
+		Global("BSInterjects","LOCALS",24)
+		Global("BSInterjects","LOCALS",26)
+		Global("BSInterjects","LOCALS",28)
+		Global("BSInterjects","LOCALS",30)
+		Global("BSInterjects","LOCALS",32)
+		Global("BSInterjects","LOCALS",34)
+		Global("BSInterjects","LOCALS",36)
+		Global("BSInterjects","LOCALS",38)
+		Global("BSInterjects","LOCALS",40)
+		Global("BSInterjects","LOCALS",42)
+		Global("BSInterjects","LOCALS",44)
+		Global("BSInterjects","LOCALS",46)
+		Global("BSInterjects","LOCALS",48)
+		Global("BSInterjects","LOCALS",50)
+THEN
+	RESPONSE #100
+		IncrementGlobal("BSInterjects","LOCALS",1)
+		RealSetGlobalTimer("BSInterjectsTimer","GLOBAL",2250)
+END
+
+IF
+	InParty(Myself)
+	OR(2)
+		GlobalGT("BSInterjects","LOCALS",50)
+		GlobalGT("BSWhiner","LOCALS",2)
+	RealGlobalTimerExpired("BSInterjectsTimer","GLOBAL")
+	CombatCounter(0)
+	!See([ENEMY])
+	!Range([NEUTRAL],10)
+THEN
+	RESPONSE #100
+		RealSetGlobalTimer("BSInterjectsTimer","GLOBAL",1125)
+END
+

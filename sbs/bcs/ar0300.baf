@@ -1,0 +1,8 @@
+IF
+	Global("BhaalScrollSeller","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("BhaalScrollSeller","GLOBAL",1)
+		CreateCreature("SELLTHF",[3626.2566],4)
+END
+
