@@ -1,65 +1,65 @@
 BEGIN SELLTHF
 
-IF ~NumTimesTalkedTo(0)~ THEN BEGIN Offer
+IF ~NumTimesTalkedTo(0)~ Offer
   SAY @0
-  IF ~~ THEN REPLY @1 GOTO Upto
-  IF ~~ THEN REPLY @2 GOTO NoTrust
-  IF ~~ THEN REPLY @3 DO  ~SetGlobal("KnowBhaalScroll","LOCALS",1)~ GOTO GoodVibes
+  ++ @1 + Upto
+  ++ @2 + NoTrust
+  ++ @3 DO ~SetGlobal("KnowBhaalScroll","LOCALS",1)~ + GoodVibes
 END
 
-IF ~HasItem("SCRLBS",Myself)~ THEN BEGIN StillGood
+IF ~HasItem("SCRLBS",Myself)~ StillGood
   SAY @4
-  IF ~Global("KnowBhaalScroll","LOCALS",1) PartyGoldGT(499)~ THEN REPLY @5 GOTO Purchase
-  IF ~Global("KnowBhaalScroll","LOCALS",1)~ THEN REPLY @6 GOTO FinalOffer
-  IF ~Global("KnowBhaalScroll","LOCALS",0)~ THEN REPLY @7 DO ~SetGlobal("KnowBhaalScroll","LOCALS",1)~ GOTO GoodVibes
-  IF ~~ THEN REPLY @8 GOTO NoTrust
+  + ~Global("KnowBhaalScroll","LOCALS",1) PartyGoldGT(499)~ + @5 + Purchase
+  + ~Global("KnowBhaalScroll","LOCALS",1)~ + @6 + FinalOffer
+  + ~Global("KnowBhaalScroll","LOCALS",0)~ + @7 DO ~SetGlobal("KnowBhaalScroll","LOCALS",1)~ + GoodVibes
+  ++ @8 + NoTrust
 END
 
-IF ~PartyHasItem("SCRLBS")~ THEN BEGIN GoodMerchandise
+IF ~PartyHasItem("SCRLBS")~ GoodMerchandise
   SAY @9
-  IF ~~ THEN EXIT
+  IF ~~ EXIT
 END
 
-IF ~True()~ THEN BEGIN AnyGood
+IF ~True()~ AnyGood
   SAY @10
-  IF ~~ THEN EXIT
+  IF ~~ EXIT
 END
 
-IF ~~ THEN BEGIN Upto
+IF ~~ Upto
   SAY @11
-  IF ~~ THEN REPLY @12 DO  ~SetGlobal("KnowBhaalScroll","LOCALS",1)~ GOTO GoodVibes
-  IF ~~ THEN REPLY @13 GOTO NoTrust
+  ++ @12 DO ~SetGlobal("KnowBhaalScroll","LOCALS",1)~ + GoodVibes
+  ++ @13 + NoTrust
 END
 
-IF ~~ THEN BEGIN NoTrust
+IF ~~ NoTrust
   SAY @14
-  IF ~~ THEN EXIT
+  IF ~~ EXIT
 END
 
-IF ~~ THEN BEGIN GoodVibes
+IF ~~ GoodVibes
   SAY @15
-  IF ~~ THEN REPLY @16 GOTO GoodVibes2
+  ++ @16 + GoodVibes2
 END
 
-IF ~~ THEN BEGIN GoodVibes2
+IF ~~ GoodVibes2
   SAY @17
-  IF ~~ THEN REPLY @18 GOTO StartOffer
+  ++ @18 + StartOffer
 END
 
-IF ~~ THEN BEGIN StartOffer
+IF ~~ StartOffer
   SAY @19
-  IF ~PartyGoldGT(499)~ THEN REPLY @20 GOTO Purchase
-  IF ~~ THEN REPLY @21 GOTO FinalOffer
-  IF ~~ THEN REPLY @22 GOTO  NoTrust
+  + ~PartyGoldGT(499)~ + @20 + Purchase
+  ++ @21 + FinalOffer
+  ++ @22 + NoTrust
 END
 
-IF ~~ THEN BEGIN Purchase
+IF ~~ Purchase
   SAY @23
-  IF ~~ THEN DO ~TakePartyGold(500) GiveItem("SCRLBS",LastTalkedToBy)~ EXIT
+  IF ~~ DO ~TakePartyGold(500) GiveItem("SCRLBS",LastTalkedToBy)~ EXIT
 END
 
-IF ~~ THEN BEGIN FinalOffer
+IF ~~ FinalOffer
   SAY @24
-  IF ~PartyGoldGT(499)~ THEN REPLY @25 GOTO Purchase
-  IF ~~ THEN REPLY @26 GOTO NoTrust
+  + ~PartyGoldGT(499)~ + @25 + Purchase
+  ++ @26 + NoTrust
 END
