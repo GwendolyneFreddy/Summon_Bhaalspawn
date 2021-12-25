@@ -44,7 +44,10 @@ This mod that adds an extra NPC (Sandra) in a very interesting way.  It also act
 - Externalized tp2 code into *main_component.tpa* library for more comfortable readability and maintenance.
 - Commented code as much as possible.
 - Grouped portraits installations into four main `SUBCOMPONENTS`.
+- Modernized dialogues coding.
+- Proofread English and French translations (Gwendolyne).
 - Integrated <a href="http://www.shsforums.net/topic/42220-fixes-for-the-big-fixpack/page-12#entry485886">BWP Lollorian's portrait installation fix</a> that restores three missing installation English strref.
+- Moved unused wav files into new :file_folder: "*legacy*" folder.
 - Lower cased files.
 - Added archive libiconv-1.9.2-1-src.7z with iconv license info.
 - Updated WeiDU installer to v249.
