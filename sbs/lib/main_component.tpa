@@ -133,7 +133,7 @@ COMPILE ~sbs/d/bbhalspw.d~ USING ~sbs/%s/bbhalspw.tra~
 
 // Extend the bottom of ar0300 so the thief appears in the docks district
 // ----------------------------------------------------------------------
-EXTEND_BOTTOM ~ar0300.bcs~ ~sbs/baf/ar300.baf~
+EXTEND_BOTTOM ~ar0300.bcs~ ~sbs/baf/ar0300.baf~
 
 // Extend the bottom of ar0903 so the messenger appears in the Radiant Heart Headquarters
 // --------------------------------------------------------------------------------------
